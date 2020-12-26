@@ -1,8 +1,0 @@
-<input type="button" value="Home" (click)="homepage()" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a [routerLink]="['/studentdashboard',{outlets: {'student': ['studentinfo']}}]"> Student Info</a> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a [routerLink]="['/studentdashboard',{outlets: {'student': ['availsport']}}]">Sports List </a> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a [routerLink]="['/studentdashboard',{outlets: {'student': ['enroll']}}]"> Enroll</a> 
-<router-outlet name='student'></router-outlet>
