@@ -1,0 +1,30 @@
+Database :
+
+1.Available Sports//1.Sid 2.sportName 3.TrainedId 4.Fee
+2.Customer//1.Cid 2.CustName 3.CustPhno 4.Username 5.pass 6.Wallet 7.points 
+3.Trainer// 1.Tid 2.TraiName 3.TrainPhno 4.age 5.experience 6.Username 7.password 8.sid
+4.Training Camp....//1.Tcid 2.tid 3.cid 4.sid 6.doj
+
+ 
+UI :
+
+Home page :4buttons
+
+1.Student and trainer login
+2.Student Signup
+3.About us
+
+inside Student Login Page:4.button
+
+1.Stud details
+2.avail sports
+3.enroll in sport traing.
+4.home button
+
+inside Trainer Login Page:4.button
+
+1.Trainer Details
+2.list of students under trainer
+3.Accept/reject req
+4.update points in students table
+4.home button
