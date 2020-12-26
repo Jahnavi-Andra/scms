@@ -1,0 +1,20 @@
+<br><br>
+<body>
+<div class="home">
+<input type="button" value="Home" (click)="homepage()" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/default',{outlets: {'data': ['studentlogin']}}]"> Student Login</a>  -->
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/studentlogin']">Student Login</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/default',{outlets: {'data': ['trainerlogin']}}]"> Trainer Login</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+<input type="button" value="StudentLogin" (click)="student()" style="color: #03506f"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" value="TrainerLogin" (click)="trainer()" style="color: #03506f"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" value="About Us" (click)="Aboutus()" style="color: #03506f"/>
+<!-- <a [routerLink]="['/default',{outlets: {'data': ['aboutus']}}]"> About Us</a>  -->
+</div></body>
+<router-outlet name='data'></router-outlet>
