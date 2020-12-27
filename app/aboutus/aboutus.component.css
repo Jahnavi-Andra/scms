@@ -56,10 +56,6 @@ h3 {
 
 }
 
-.img-para {
-
-    
-}
 /* achievements */
 #testimonials {
     background-color: #ef8172;
@@ -84,9 +80,7 @@ h3 {
     text-align: center;
     margin: auto;
 }
-.captain {
-    background-image: url(coach.png);
-}
+
 .press-img {
     width: 15%;
     padding: 10px;
