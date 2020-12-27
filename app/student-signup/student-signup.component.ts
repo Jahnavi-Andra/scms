@@ -9,6 +9,9 @@ export class StudentSignupComponent implements OnInit {
   homepage() {
     this._router.navigate(['/default']);
   }
+  reg() {
+    alert("Register Success");
+  }
   constructor(private _router : Router) { }
 
   ngOnInit(): void {

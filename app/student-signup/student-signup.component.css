@@ -1,14 +1,26 @@
 .container {
-    background-image:url("/assets/vector.jpg");
-    background-size:cover;
+   
+     background-size:cover;
     text-align:center;
-    position:relative;
-    height: 600px;
-    width: 100%;
+    position:relative; 
+    /* min-height: 666px; */
+     /* height: 600px; */
+    width: 50%; 
+    
+    
 }
+/* .col-md-4 .control-label{
+    margin-right: 60%;
+} */
 .new{
     text-align:center;
+    margin-top: 20px;
 }
-.shome{
+/* .shome{
     background-color:#0a043c
+} */
+.image{
+    background-image:url("/assets/vector.jpg");
+    min-height: 670px;
 }
+/* .col-md-4 .control-label{} */
