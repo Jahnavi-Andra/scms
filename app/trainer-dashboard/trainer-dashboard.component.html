@@ -1,10 +1,23 @@
-<input type="button" value="Home" (click)="homepage()" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="back">
+    <header class="hero">
+
+<div class="abc">
+    <br>
+<input class="home" type="button" value="Home" (click)="homepage()" />
+<div class="btn-group"> 
 <a [routerLink]="['/trainerdashboard',{outlets: {'trainer': ['trainerinfo']}}]"> Trainer Info</a> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a [routerLink]="['/trainerdashboard',{outlets: {'trainer': ['list']}}]">List Of Students </a> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a [routerLink]="['/trainerdashboard',{outlets: {'trainer': ['acrej']}}]"> Accept or Reject</a> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a [routerLink]="['/trainerdashboard',{outlets: {'trainer': ['updatepoints']}}]"> Update Points</a> 
 <router-outlet name='trainer'></router-outlet>
+<br>
+</div>
+</div>
+</header>
+</body>
+</html>
