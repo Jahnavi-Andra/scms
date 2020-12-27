@@ -1,0 +1,16 @@
+<!-- <br>
+<input type="button" value="Login" (click)="trainer()" /> -->
+<br>
+<br>
+<input type="button" value="Home" (click)="homepage()" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br><br>
+<form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    Enter Username :
+    <input type = "text" name = "username" placeholder = "username" ngModel>
+    <br/><br>
+    Enter Password :
+    <input type = "password" name = "passwordd" placeholder = "password" ngModel>
+    <br/><br>
+    <input type = "submit" name="Login" value = "submit">
+ </form>
