@@ -20,7 +20,7 @@ import { UpdatePointsComponent } from './update-points/update-points.component';
 import { RouterModule, Routes } from '@angular/router';
 import {​​​​​​​​ HttpModule }​​​​​​​​ from'@angular/http';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
-import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+// import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 const appRoutes : Routes = [
   {path :'studentdashboard', component:StudentDashboardComponent,
   children :
@@ -77,7 +77,6 @@ const appRoutes : Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes),
     NgxPageScrollModule,
-    NgxPageScrollCoreModule,
     AppRoutingModule
   ],
   providers: [],
