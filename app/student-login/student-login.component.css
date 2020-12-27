@@ -1,0 +1,40 @@
+html,body {
+    background-image:url("C:\Users\53243\workspace\bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:617px;
+    background-blend-mode:darken;
+  }
+.container{
+    width: 600px;
+margin-bottom: 293px;
+}
+.card{
+    height: 410px;
+    width: 500px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 100%;
+}
+h1 {
+    margin-top: 5px;
+    font-weight: normal;
+    text-align: center;
+    font-family: "Audiowide", cursive;
+  
+  }
+ .placeholder{
+font-family: "Audiowide", cursive;
+  }
+.blinking{
+    animation:blinkingText 1s infinite;
+  }  
+  @keyframes blinkingText{
+    40%{    color: violet }
+    100%{   color: blueviolet;    }
+  }
+
+  .user{
+     height: 35px;
+  }
