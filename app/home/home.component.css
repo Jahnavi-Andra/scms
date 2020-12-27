@@ -10,7 +10,7 @@ font-family: Audiowide;
 }
 .bimg {
     /* The image used */
-    background-image:url("/assets/vector.jpg");
+    background-image:url("/assets/mount.jpg");
     min-height: 666px;
 
     /* Center and scale the image nicely */

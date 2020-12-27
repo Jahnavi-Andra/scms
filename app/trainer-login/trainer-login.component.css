@@ -43,7 +43,7 @@ body{
   /* background-color: #1a8fb4; */
   font-family: 'Roboto', sans-serif;
   font-size :14px;
-  background-image:url("C:\Users\53243\workspace\bg.jpg");
+  background-image:url("/assets/bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
