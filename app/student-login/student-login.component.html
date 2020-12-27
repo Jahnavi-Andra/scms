@@ -1,18 +1,58 @@
-<!-- <br>
-<input type="button" value="Login" (click)="student()" />
-<br> -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Login Page</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body >
+	<nav class="navbar navbar-light ">
+		<div class="container-fluid bg-bright">
+		  <input type="button" value="Home" (click)="homepage()" class="home btn btn-info"   />
+		</div>
+	  </nav>
+	<h1><span class="blinking"><b>Student Login Page</b></span></h1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<div class="container" >
+	<div class="d-flex justify-content-center h-150">
+		<div class="card" style="background-color: #65d6ce;">
+			<div class="card-header">
+				<h3>Sign In</h3>
+			</div>
+			<div class="card-body" >
+				<form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+					<div class="input-group form-group user" >
+						<div class="input-group-prepend">
+							<span class="input-group-text "><i class="fas fa-user " ></i></span>
+						</div>
+						<input type="text" class="form-control user placeholder" placeholder="username">
+					</div>
+					<div class="input-group form-group user">
+						<div class="input-group-prepend">
+							<span class="input-group-text "><i class="fas fa-key "></i></span>
+						</div>
+						<input type="password" class="form-control user placeholder" placeholder="password">
+					</div>
+					<br>
+					<div class="form-group" >
+						<input type = "submit" name="Login" value = "submit" class="placeholder user btn form-control login_btn" style="background-color: #ffdada;" >
+					</div>
+				</form>
+			</div>
+			<div class="card-footer" >        
+             <h5 >
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					Don't have an account?</h5><br> 
+				<div class="d-flex justify-content-center links" >
+                    <input type="button" value="Register" (click)="register()" class="placeholder user btn form-control" style="background-color: #ffdada;"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-<br>
-<input type="button" value="Home" (click)="homepage()" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="button" value="Register" (click)="register()" />
-<br/><br/>
-<form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
-    Enter Username :
-    <input type = "text" name = "username" placeholder = "username" ngModel>
-    <br/><br/>
-    Enter Password :
-    <input type = "password" name = "passwordd" placeholder = "password" ngModel>
-    <br/><br/>
-    <input type = "submit" name="Login" value = "submit">
- </form>
+</body>
+</html>
