@@ -1,0 +1,88 @@
+
+body, html {
+    height: 100%;
+  position: absolute;
+  }
+
+.nav-link{
+font-family: Audiowide;
+
+  
+}
+.bimg {
+    /* The image used */
+    background-image:url("/assets/mount.jpg");
+    min-height: 666px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+  background-size:cover;
+    /* Needed to position the navbar */
+   
+  }
+  /* .image{
+    margin-top:10px;
+    margin-left: 10px;
+  } */
+
+.cont-vid{
+  margin-top:340px;
+
+overflow: hidden;
+border: transparent;
+
+}
+
+  .cont {
+    position: relative;
+  
+    /* margin: 20px; */
+    width: auto;
+    /* margin-top: 30px; */
+    margin-left: 50px;
+    
+  }
+  .vid{
+    top: 40%;
+    /* left: 40%; */
+  }
+  /* .navbar{
+    background-color: transparent;
+  } */
+  .navbar-brand{
+text-align: justify;
+  }
+
+  .nav-link:hover {
+    width: 150px;
+    color: white;
+  /* text-shadow: 2px 2px 4px #000000; */
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(112, 7, 7));
+  }
+  
+  .club{
+      height: 200px;
+      width: 400px;
+      position: fixed;
+      color:white; 
+      font-family: 'Redressed', cursive;
+      top: 50%;
+      left: 50%;
+      margin-top: -100px;
+      margin-left: -200px;
+      text-shadow: 4px 4px 4px rgb(0, 0, 0);
+      font-size: 45px;
+      color: white;
+      opacity: 0.8;
+      transition: 0.3s;
+  }
+  .club:hover{
+    
+    text-shadow: 2px 2px 4px #000000;
+    opacity: 3;
+  } 
+ 
+  
+  
+  

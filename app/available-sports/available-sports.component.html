@@ -1,0 +1,26 @@
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <div class="table-wrapper">
+      <table class="fl-table">
+          <thead>
+          <tr class="txt1">
+            <th>Sports Id</th>
+        <th>Sports Name</th>
+        <th>Trainer Id</th>
+        <th>Sports fee</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of sportList" class="txt1">
+                <td >{{item.sportId}}</td>
+                <td>{{item.sportName}}</td>
+                <td>{{item.trainerId}}</td>
+                <td>{{item.sportFee}}</td>
+    </tr>
+          <tbody>
+      </table>
+  </div>
+
