@@ -74,7 +74,7 @@
       <body>
          <div class="formarea">
         <div class="testbox">
-          <form action="/">
+          <form #enrollForm="ngForm" (ngSubmit)="enroll(enrollForm)">
             <div class="banner txt" >
               <h1>Avant Garde Sports Club</h1>
             </div>
@@ -112,7 +112,7 @@
               <input id="wallet" type="text" name="state" required/>
             </div>
                <div class="btn-block">
-              <button type="submit" (click)="enroll()" class="txt1">SUBMIT</button>
+              <button type="submit" class="txt1">SUBMIT</button>
             </div>
           </form>
         </div>

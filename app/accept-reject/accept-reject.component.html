@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <form class="frm">
+    <form #arForm="ngForm" (ngSubmit)="acceptreject(arForm)" class="frm">
         <div class="form-group">
           <label >trainer Id</label>
           <input type="text"  class="form-control" placeholder="Trainer Id">
@@ -35,7 +35,7 @@
             Check me out
           </label>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <input type="submit" class="btn btn-primary"/>Submit
       </form>
 </body>
 </html>

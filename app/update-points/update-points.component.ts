@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-update-points',
   templateUrl: './update-points.component.html',
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdatePointsComponent implements OnInit {
 
+  update(pointsForm: NgForm){
+    alert("Points Updated");
+  }
   constructor() { }
 
   ngOnInit(): void {
