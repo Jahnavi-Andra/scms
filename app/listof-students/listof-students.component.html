@@ -1,1 +1,44 @@
-<p>listof-students works!</p>
+<!-- <div class="content">
+    <div style="color: aliceblue; flex: content;">
+    <div style="text-align:center">
+    <table border="3" >
+        <tr>
+        <th>TrainingCamp Id</th>
+        <th>Student Name</th>
+        <th>PhoneNo</th>
+        <th>Sport</th>
+        <th>points</th>
+        </tr>
+        <tr *ngFor="let item of StudentList">
+            <td>{{item.traincampid}}</td>
+            <td>{{item.studentname}}</td>
+            <td>{{item.PhoneNo}}</td>
+            <td>{{item.sport}}</td>
+            <td>{{item.points}}</td>
+        </tr>
+    </table>
+    </div>
+    </div> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <div class="table-wrapper">
+      <table class="fl-table">
+          <thead>
+          <tr class="txt1">
+            <th>TrainingCamp Id</th>
+            <th>Student Name</th>
+            <th>PhoneNo</th>
+            <th>Sport</th>
+            <th>points</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of StudentList" class="txt1">
+              <td>{{item.traincampid}}</td>
+              <td>{{item.studentname}}</td>
+              <td>{{item.PhoneNo}}</td>
+              <td>{{item.sport}}</td>
+              <td>{{item.points}}</td>
+          </tr>
+          <tbody>
+      </table>
+  </div>

@@ -12,6 +12,9 @@ export class StudentLoginComponent implements OnInit {
   // student(){
   //   this._router.navigate(['/studentdashboard']);
   // }
+  aboutus(){
+    this._router.navigate(['/aboutus']);
+  }
   register(){
     this._router.navigate(['/register']);
   }
