@@ -1,12 +1,18 @@
 
 <html>
 
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <body>
 	<nav class="navbar" >
-		  <input class="home" type="button" value="Home     " (click)="homepage()" style="background-color: #fcf8e8;"/>
-	  </nav>
+		  <input class="home d-flex justify-content-center" type="button" value="Home    " (click)="homepage()" style="background-color: #fcf8e8;"/>
+		  &nbsp;&nbsp;&nbsp;&nbsp;
+		  <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+		  <input class="home" type="button" value="About Us  " (click)="aboutus()" style="background-color: #fcf8e8;">
+		</nav>
 <div class="owl">
 	<div class="hand"></div>
 	<div class="hand hand-r"></div>
@@ -16,8 +22,13 @@
 	</div>
   </div>
   <div class="form" style="background-color: #d1c38a;">
-		<div class="form-header placeholder">
+		<div class="form-header placeholder " >
 			<h3>Sign In</h3>
+			<div class="social_icon">
+				<span><i class="fab fa-facebook-square"></i></span>
+				<span><i class="fab fa-google-plus-square"></i></span>
+				<span><i class="fab fa-twitter-square"></i></span>
+			</div>
 		</div>
 	<form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
 	<div class="control">
@@ -26,7 +37,8 @@
 			<span class="input-group-text"><i class="fas fa-user " ></i></span>
 		</div>
 		<input type="text" class="box form-control placeholder" placeholder="username">
-  </div></div>
+  </div>
+</div> 
   <div class="control">
 	<div class="input-group form-group">
 		<div class="input-group-prepend">
@@ -36,8 +48,8 @@
 	</div>
   </div><br>
   
-  <div class="form-group" >
-	<input type = "submit" name="Login" value = "Submit" class="placeholder btn form-control login_btn" >
+  <div class="form-group d-flex justify-content-center" >
+	<input type = "submit" name="Login" value = "Submit" class=" placeholder btn form-control login_btn" >
 					
 				</div>
 </form>

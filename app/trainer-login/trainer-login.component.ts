@@ -12,6 +12,9 @@ export class TrainerLoginComponent implements OnInit {
   // trainer() {
   //   this._router.navigate(['/trainerdashboard']);
   // }
+  aboutus(){
+    this._router.navigate(['/aboutus']);
+  }
   homepage() {
     this._router.navigate(['/default']);
   }

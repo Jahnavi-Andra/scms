@@ -21,6 +21,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {​​​​​​​​ HttpModule }​​​​​​​​ from'@angular/http';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 // import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { HttpClientModule } from '@angular/common/http';
 const appRoutes : Routes = [
   {path :'studentdashboard', component:StudentDashboardComponent,
   children :
@@ -77,6 +78,7 @@ const appRoutes : Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes),
     NgxPageScrollModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],

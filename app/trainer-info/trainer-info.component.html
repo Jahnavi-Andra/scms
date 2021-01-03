@@ -1,1 +1,49 @@
-<p>trainer-info works!</p>
+<!-- <div class="content">
+<div style="color: aliceblue; flex: content;">
+<div style="text-align:center">
+<table border="3" >
+    <tr>
+    <th>Trainer Id</th>
+    <th>Trainer Name</th>
+    <th>PhoneNo</th>
+    <th>Age</th>
+    <th>Experience</th>
+    <th>Username</th>
+    <th>Sport</th>
+    </tr>
+    <tr *ngFor="let item of StudentList">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.PhoneNo}}</td>
+        <td>{{item.Age}}</td>
+        <td>{{item.Experience}}</td>
+        <td>{{item.Username}}</td>
+        <td>{{item.sport}}</td>
+    </tr>
+</table>
+</div>
+</div> -->
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<div class="pricing-box-container">
+	<div class="pricing-box pricing-box-bg-image text-center">
+        <p>Trainer  Information</p>
+		 <!-- <p class="price"><sup>$</sup>39<sub>/mo</sub></p> -->
+		<ul class="features-list">
+            <li>
+                <table>
+            <tr *ngFor="let item of StudentList">
+              <li><strong>&nbsp;Trainer Id </strong> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{{item.id}}</li>
+              <li><strong> &nbsp;Trainer Name </strong>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{{item.name}}</li>
+              <li><strong> &nbsp;Trainer Phone No </strong> &nbsp;&nbsp;&nbsp; &nbsp;{{item.PhoneNo}}</li>
+              <li><strong> &nbsp;Trainer Age </strong>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{{item.Age}}</li>
+              <li><strong> &nbsp;Trainer Experience </strong>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{{item.Experience}}</li>
+              <li><strong> &nbsp;Trainer Username </strong> &nbsp;&nbsp;&nbsp; &nbsp;{{item.Username}}</li>
+              <li><strong> &nbsp;Trainer Sport </strong>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;{{item.sport}}</li>
+           </tr> </table>
+        </li>
+		  </ul>
+	</div>
+</div> 
+  
