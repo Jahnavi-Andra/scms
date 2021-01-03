@@ -80,36 +80,58 @@
             </div>
                 <div class="item">
               <label for="name" class="txt1">Student Name<span>*</span></label>
-              <input id="name" type="text" name="name" required/>
+              <input id="name" type="text" name="name" ngModel name="sname" required #sname="ngModel"/>
+              <div class="text-danger"
+              *ngIf="(sname.invalid  && enrollForm.submitted) ">&nbsp;&nbsp;
+             Enter Student Name
+            </div>
             </div>
             <div class="item">
               <label for="Trainer" class="txt1">Trainer Name<span>*</span></label>
-              <select >
+              <select ngModel name="tname" required #tname="ngModel">
                <option selected value="" disabled selected></option>
                <option value="krishna" class="txt">krishna</option>
                <option value="lenin" class="txt">lenin</option>
                <option value="jahnavi" class="txt">jahnavi</option>
                <option value="mahalakshmi" class="txt">mahalakshmi</option>
                <option value="jashwanth" class="txt">jashwanth</option>
+              
              </select>
+             <div class="text-danger"
+             *ngIf="(tname.invalid  && enrollForm.submitted) ">&nbsp;&nbsp;
+             Select Any one
+           </div>
             </div>
             <div class="item">
               <label for="Sport" class="txt1">Sport Name<span>*</span></label>
-              <select>
+              <select ngModel name="sport" required #sport="ngModel">
                <option selected value="" disabled selected></option>
                <option value="Football" class="txt">Football</option>
                <option value="Cricket" class="txt">Cricket</option>
                <option value="Volleyball" class="txt">Volleyball</option>
                <option value="Tennis" class="txt">Tennis</option>
+               
              </select>
+             <div class="text-danger"
+               *ngIf="(sport.invalid  && enrollForm.submitted) ">&nbsp;&nbsp;
+               Select Any one
+             </div>
             </div>
             <div class="item">
               <label for="phone" class="txt1">Phone No<span>*</span></label>
-              <input id="phone" type="text" name="city" required/>
+              <input id="phone" type="text" ngModel name="pno" required #pno="ngModel"/>
+              <div class="text-danger"
+              *ngIf="(pno.invalid  && enrollForm.submitted) ">&nbsp;&nbsp;
+              Enter Phone No
+            </div>
             </div>
             <div class="item">
               <label for="state" class="txt1">Wallet<span>*</span></label>
-              <input id="wallet" type="text" name="state" required/>
+              <input id="wallet" type="text" ngModel name="wal" required #wal="ngModel"/>
+              <div class="text-danger"
+              *ngIf="(wal.invalid  && enrollForm.submitted) ">&nbsp;&nbsp;
+              Enter Amount
+            </div>
             </div>
                <div class="btn-block">
               <button type="submit" class="txt1">SUBMIT</button>

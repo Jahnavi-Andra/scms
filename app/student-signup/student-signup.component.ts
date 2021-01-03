@@ -17,7 +17,13 @@ export class StudentSignupComponent implements OnInit {
     this._router.navigate(['/studentlogin']);
   }
   register(regForm: NgForm){
-    alert("Registered");
+    if(regForm.invalid){
+      alert("Enter all the details");
+    }
+    else{
+      alert("Registered");
+    }
+    
   }
   constructor(private _router : Router) { }
 

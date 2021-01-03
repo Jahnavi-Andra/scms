@@ -1,34 +1,33 @@
-
-
-
-
 <html>
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  </head>
 <body>
     <form #pointsForm="ngForm" (ngSubmit)="update(pointsForm)">
         <div class="form-group">
           <label >Student Id </label>
-          <input type="text"  class="form-control" placeholder="Student Id">
+          <input type="text"  name="studentid "class="form-control" placeholder="Student Id" ngModel name="studentid" required #studentid="ngModel">
+          <span class="text-danger"
+          *ngIf="(studentid.invalid  && pointsForm.submitted) ">
+          Name is required
+      </span>
         </div>
-
         <div class="form-group">
             <label >Points Based on Performance</label>
-            <input type="number"  class="form-control" placeholder="Points">
-          </div>
-      
-    
-      
+            <input type="number"  name="points" class="form-control" placeholder="Points" ngModel name="points" required #points="ngModel">
+            <span class="text-danger"
+            *ngIf="(points.invalid  && pointsForm.submitted) ">
+            Points is required
+        </span>
+          </div>      
         <div class="form-check">
           <label class="form-check-label">
             <input type="checkbox" class="form-check-input">
             Check me out
           </label>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <input type="submit" class="btn btn-primary">
       </form>
-
-
 </body>
 </html>

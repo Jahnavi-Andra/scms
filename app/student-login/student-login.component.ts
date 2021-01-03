@@ -22,7 +22,12 @@ export class StudentLoginComponent implements OnInit {
     this._router.navigate(['/default']);
   }
   login(loginForm : NgForm) {
-    this._router.navigate(['/studentdashboard']);
+    if (loginForm.invalid) {
+      alert("Enter all details");
+    }
+    else{
+      this._router.navigate(['/studentdashboard']);
+    }
     }
 //   onClickSubmit(data) {
 //     alert("Entered Email id : " + data.username);

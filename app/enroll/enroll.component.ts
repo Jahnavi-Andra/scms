@@ -10,7 +10,12 @@ export class EnrollComponent implements OnInit {
 //   alert("Enrolled");
 // }
 enroll(enrollForm: NgForm){
-  alert("Enrolled");
+  if (enrollForm.invalid) {
+    alert("Enter all details");
+  }
+  else{
+    alert("Enrolled");
+  }
 }
   constructor() { }
 

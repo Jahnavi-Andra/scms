@@ -7,7 +7,12 @@ import { NgForm } from '@angular/forms';
 })
 export class AcceptRejectComponent implements OnInit {
   acceptreject(arForm: NgForm){
-    alert("Done!!");
+    if (arForm.invalid) {
+      alert("Enter all details");
+    }
+    else{
+      alert("Done");
+    }
   }
   constructor() { }
 

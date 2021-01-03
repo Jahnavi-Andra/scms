@@ -33,13 +33,21 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text "><i class="fas fa-user " ></i></span>
 						</div>
-						<input type="text" class="form-control user placeholder" placeholder="username" required>
+						<input type="text" class="form-control user placeholder" placeholder="username" required ngModel name="username" required #username="ngModel">
+						<div class="text-danger"
+						*ngIf="(username.invalid  && loginForm.submitted) ">&nbsp;&nbsp;
+							Enter Username
+						</div>
 					</div>
 					<div class="input-group form-group user">
 						<div class="input-group-prepend">
 							<span class="input-group-text "><i class="fas fa-key "></i></span>
 						</div>
-						<input type="password" class="form-control user placeholder" placeholder="password" required>
+						<input type="password" class="form-control user placeholder" placeholder="password" required ngModel name="password" required #password="ngModel">
+						<div class="text-danger"
+						*ngIf="(password.invalid  && loginForm.submitted) ">&nbsp;&nbsp;
+						Enter Password
+					</div>
 					</div>
 					<div class="row align-items-center remember">
 						<input type="checkbox">Remember Me

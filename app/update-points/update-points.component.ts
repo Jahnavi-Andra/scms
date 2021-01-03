@@ -6,9 +6,15 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./update-points.component.css']
 })
 export class UpdatePointsComponent implements OnInit {
-
+studentid : string;
+points:number;
   update(pointsForm: NgForm){
-    alert("Points Updated");
+    if (pointsForm.invalid) {
+      alert("Enter all details");
+    }
+    else{
+      alert("Done");
+    }
   }
   constructor() { }
 

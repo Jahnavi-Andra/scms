@@ -6,28 +6,44 @@
     <form #arForm="ngForm" (ngSubmit)="acceptreject(arForm)" class="frm">
         <div class="form-group">
           <label >trainer Id</label>
-          <input type="text"  class="form-control" placeholder="Trainer Id">
+          <input type="text"  class="form-control" placeholder="Trainer Id" ngModel name="tid" required #tid="ngModel">
+          <div class="text-danger"
+          *ngIf="(tid.invalid  && arForm.submitted) ">&nbsp;&nbsp;
+          Enter Trainer Id
+        </div>
         </div>
         <div class="form-group">
             <label for="exampleSelect1">Student List</label>
-            <select class="form-control" id="exampleSelect1">
+            <select class="form-control" id="exampleSelect1" ngModel name="sl" required #sl="ngModel">
               <option>1</option>
               <option>2</option>
               <option>3</option>
               <option>4</option>
               <option>5</option>
             </select>
+            <div class="text-danger"
+            *ngIf="(sl.invalid  && arForm.submitted) ">&nbsp;&nbsp;
+            Select Any one
+          </div>
           </div>
           <div class="form-group">
             <label for="exampleSelect2">Accept / Reject</label>
-            <select  class="form-control" id="exampleSelect2"  default="Accept/Reject">
+            <select  class="form-control" id="exampleSelect2"  default="Accept/Reject" ngModel name="ar" required #ar="ngModel">
               <option>Accept</option>
               <option>Reject</option>
             </select>
+            <div class="text-danger"
+            *ngIf="(ar.invalid  && arForm.submitted) ">&nbsp;&nbsp;
+            Select Any one
+          </div>
           </div>
         <div class="form-group">
             <label >DOJ</label>
-            <input type="text"  class="form-control" placeholder="DOj">
+            <input type="text"  class="form-control" placeholder="DOj" ngModel name="doj" required #doj="ngModel">
+            <div class="text-danger"
+            *ngIf="(doj.invalid  && arForm.submitted) ">&nbsp;&nbsp;
+            Enter Date
+          </div>
           </div>      
         <div class="form-check">
           <label class="form-check-label">
@@ -35,7 +51,7 @@
             Check me out
           </label>
         </div>
-        <input type="submit" class="btn btn-primary"/>Submit
+        <input type="submit" class="btn btn-primary">
       </form>
 </body>
 </html>

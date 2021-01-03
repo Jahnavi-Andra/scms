@@ -21,11 +21,15 @@ export class TrainerLoginComponent implements OnInit {
 //   onClickSubmit(data) {
 //     alert("Entered Email id : " + data.emailid);
 //  }
-login(loginForm : NgForm) {
-  this._router.navigate(['/trainerdashboard']);
-   
-  }
 
+login(loginForm : NgForm) {
+  if (loginForm.invalid) {
+    alert("Enter all details");
+  }
+  else{
+    this._router.navigate(['/trainerdashboard']);
+  }
+  }
   // x(){
   //   $('input[type="password"]')
   // .on("focus", () => {

@@ -1,7 +1,4 @@
-
 <html>
-
-
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -36,7 +33,11 @@
 		<div class="input-group-prepend">
 			<span class="input-group-text"><i class="fas fa-user " ></i></span>
 		</div>
-		<input type="text" class="box form-control placeholder" placeholder="username">
+		<input type="text" class="box form-control placeholder" placeholder="username" ngModel name="username" required #username="ngModel">
+		<div class="text-danger"
+		*ngIf="(username.invalid  && loginForm.submitted) ">&nbsp;&nbsp;
+		Enter Username
+	</div>
   </div>
 </div> 
   <div class="control">
@@ -44,16 +45,17 @@
 		<div class="input-group-prepend">
 			<span class="input-group-text"><i class="fas fa-key "></i></span>
 		</div>
-		<input type="password" id="password" class="form-control placeholder" placeholder="password">
+		<input type="password" id="password" class="form-control placeholder" placeholder="password" ngModel name="password" required #password="ngModel">
+		<div class="text-danger"
+		*ngIf="(password.invalid  && loginForm.submitted) ">&nbsp;&nbsp;
+		Enter Password
+	</div>
 	</div>
   </div><br>
-  
-  <div class="form-group d-flex justify-content-center" >
-	<input type = "submit" name="Login" value = "Submit" class=" placeholder btn form-control login_btn" >
-					
-				</div>
+  <div class="form-group d-flex justify-content-center">
+	<input type = "submit" name="Login" value = "Submit" class=" placeholder btn form-control login_btn">				
+	</div>
 </form>
   </div>
-
 </body>
 </html>

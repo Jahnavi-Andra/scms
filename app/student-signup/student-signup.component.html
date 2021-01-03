@@ -25,31 +25,62 @@
                          <div class="form-group">
                             <label class="col-md-3 control-label text-left">Full Name</label>
                             <div class="col-md-9 inputGroupContainer">
-                               <div class="input-group "><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input id="fullName" name="fullName" placeholder="Full Name" class="form-control" required="true" value="" type="text"></div>
+                               <div class="input-group "><span class="input-group-addon">
+                              <i class="glyphicon glyphicon-user"></i></span>
+                              <input id="fullName" placeholder="Full Name" class="form-control" ngModel name="fullName" required #fullName="ngModel" type="text">
+                              <div class="text-danger"
+                              *ngIf="(fullName.invalid  && regForm.submitted) ">&nbsp;&nbsp;
+                             Enter Full Name
+                            </div>
+                           </div>
                             </div>
                          </div>
                          <div class="form-group">
                             <label class="col-md-3 control-label text-left">Address</label>
                             <div class="col-md-9 inputGroupContainer">
-                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="address" name="address" placeholder="Address " class="form-control" required="true" value="" type="text"></div>
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                 <input id="address" placeholder="Address " class="form-control" ngModel name="address" required #address="ngModel" type="text">
+                                 <div class="text-danger"
+                                 *ngIf="(address.invalid  && regForm.submitted) ">&nbsp;&nbsp;
+                                Enter Address
+                               </div>
+                              </div>
                             </div>
                          </div>
                          <div class="form-group">
                             <label class="col-md-3 control-label text-left">Email</label>
                             <div class="col-md-9 inputGroupContainer">
-                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span><input id="email" name="email" placeholder="Email" class="form-control" required="true" value="" type="text"></div>
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                 <input id="email" placeholder="Email" class="form-control"  ngModel name="email" required #email="ngModel" type="text">
+                                 <div class="text-danger"
+                                 *ngIf="(email.invalid  && regForm.submitted) ">&nbsp;&nbsp;
+                                Enter email
+                               </div>
+                              </div>
                             </div>
                          </div>
                          <div class="form-group">
                             <label class="col-md-3 control-label text-left">Phone Number</label>
                             <div class="col-md-9 inputGroupContainer">
-                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span><input id="phoneNumber" name="phoneNumber" placeholder="Phone Number" class="form-control" required="true" value="" type="text"></div>
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                              <input id="phoneNumber" placeholder="Phone Number" class="form-control" ngModel name="phoneNumber" required #phoneNumber="ngModel" type="text">
+                              <div class="text-danger"
+                              *ngIf="(phoneNumber.invalid  && regForm.submitted) ">&nbsp;&nbsp;
+                             Enter phoneNumber
+                            </div>
+                           </div>
                             </div>
                          </div>
                          <div class="form-group">
                             <label class="col-md-3 control-label text-left">Wallet</label>
                             <div class="col-md-9 inputGroupContainer">
-                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span><input id="amount" name="amount" placeholder="Wallet " class="form-control" required="true" value="" type="text"></div>
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span>
+                                 <input id="amount" placeholder="Wallet " class="form-control" ngModel name="amount" required #amount="ngModel" type="text">
+                                 <div class="text-danger"
+                              *ngIf="(amount.invalid  && regForm.submitted) ">&nbsp;&nbsp;
+                             Enter Wallet amount
+                            </div>
+                              </div>
                             </div>
                          </div>
                       </fieldset>

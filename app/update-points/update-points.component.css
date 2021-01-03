@@ -8,4 +8,10 @@ body{
   filter : opacity(0.85);
 background-color:#d4e2d4;
 }
+/* input.ng-invalid {
+  background-color:rgb(238, 117, 117);
+}
 
+input.ng-valid {
+  background-color:rgb(12, 181, 121);
+} */
