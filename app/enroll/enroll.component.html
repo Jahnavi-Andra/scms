@@ -1,1 +1,121 @@
-<p>enroll works!</p>
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<!------ Include the above in your HEAD tag ---------->
+<!-- <div class="image"> -->
+
+<!-- <div class="container  table-striped"> 
+       <table class="table ">
+          <tbody>
+             <tr>
+                <td colspan="1">
+                   <form class="well form-horizontal ">
+                      <fieldset>
+                         <div class="form-group ">
+                            <label class="col-md-3 control-label text-left">Trainer Name</label>
+                            <div class="col-md-9 inputGroupContainer">
+                               <div class="input-group "><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input id="fullName" name="fullName" placeholder="Full Name" class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                        </div>
+                         <div class="form-group">
+                            <label class="col-md-3 control-label text-left">Student Name</label>
+                            <div class="col-md-9 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="address" name="address" placeholder="Address " class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-3 control-label text-left">Sport Name</label>
+                            <div class="col-md-9 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span><input id="email" name="email" placeholder="Email" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-3 control-label text-left">Date Of Joining</label>
+                            <div class="col-md-9 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span><input id="phoneNumber" name="phoneNumber" placeholder="Phone Number" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                            </div>
+                        
+                         <div class="form-group">
+                            <label class="col-md-3 control-label text-left">Wallet</label>
+                            <div class="col-md-9 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span><input id="amount" name="amount" placeholder="Wallet " class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                           <label class="col-md-3 control-label text-left">Fee</label>
+                           <div class="col-md-9 inputGroupContainer">
+                              <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span><input id="amount" name="amount" placeholder="Wallet " class="form-control" required="true" value="" type="text"></div>
+                           </div>
+                        </div>
+                      </fieldset>
+                      <div class="new">
+                        <button type="button" class="btn btn-success" (click)="enroll()">Enroll</button>
+                        </div>
+                   </form>
+                </td>
+                
+             </tr>
+          </tbody>
+          
+       </table>
+    </div> -->
+    <!-- </div> -->
+   
+    <html>
+      <head>
+        <title>Sports Club</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+      </head>
+      <body>
+         <div class="formarea">
+        <div class="testbox">
+          <form action="/">
+            <div class="banner txt" >
+              <h1>Avant Garde Sports Club</h1>
+            </div>
+                <div class="item">
+              <label for="name" class="txt1">Student Name<span>*</span></label>
+              <input id="name" type="text" name="name" required/>
+            </div>
+            <div class="item">
+              <label for="Trainer" class="txt1">Trainer Name<span>*</span></label>
+              <select >
+               <option selected value="" disabled selected></option>
+               <option value="krishna" class="txt">krishna</option>
+               <option value="lenin" class="txt">lenin</option>
+               <option value="jahnavi" class="txt">jahnavi</option>
+               <option value="mahalakshmi" class="txt">mahalakshmi</option>
+               <option value="jashwanth" class="txt">jashwanth</option>
+             </select>
+            </div>
+            <div class="item">
+              <label for="Sport" class="txt1">Sport Name<span>*</span></label>
+              <select>
+               <option selected value="" disabled selected></option>
+               <option value="Football" class="txt">Football</option>
+               <option value="Cricket" class="txt">Cricket</option>
+               <option value="Volleyball" class="txt">Volleyball</option>
+               <option value="Tennis" class="txt">Tennis</option>
+             </select>
+            </div>
+            <div class="item">
+              <label for="phone" class="txt1">Phone No<span>*</span></label>
+              <input id="phone" type="text" name="city" required/>
+            </div>
+            <div class="item">
+              <label for="state" class="txt1">Wallet<span>*</span></label>
+              <input id="wallet" type="text" name="state" required/>
+            </div>
+               <div class="btn-block">
+              <button type="submit" (click)="enroll()" class="txt1">SUBMIT</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      </body>
+    </html>

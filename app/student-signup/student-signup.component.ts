@@ -12,6 +12,9 @@ export class StudentSignupComponent implements OnInit {
   reg() {
     alert("Register Success");
   }
+  login() {
+    this._router.navigate(['/studentlogin']);
+  }
   constructor(private _router : Router) { }
 
   ngOnInit(): void {

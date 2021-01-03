@@ -1,0 +1,17 @@
+ 
+    [
+        {"sportId" : 101, "sportName" : "Cricket",
+            "trainerId":701,"sportFee":4000} ,
+        
+            {"sportId" : 102, "sportName" : "Cricket",
+                "trainerId":702,"sportFee":4000},
+             {"sportId" : 103, "sportName" : "Tennis",
+                    "trainerId":703,"sportFee":3500},
+             {"sportId" : 104, "sportName" : "Tennis",
+                  "trainerId":705,"sportFee":3500},
+               {"sportId" : 105, "sportName" : "FootBall",
+                       "trainerId":706,"sportFee":5000},
+               {"sportId" : 106, "sportName" : "FootBall",
+                      "trainerId":707,"sportFee":5000}
+    ]
+        

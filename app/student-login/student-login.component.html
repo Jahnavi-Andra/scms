@@ -11,6 +11,7 @@
 	<nav class="navbar navbar-light ">
 		<div class="container-fluid bg-bright">
 		  <input type="button" value="Home" (click)="homepage()" class="home btn btn-info"   />
+		  <input class="about btn btn-info" type="button" value="About Us  " (click)="aboutus()">
 		</div>
 	  </nav>
 	<h1><span class="blinking"><b>Student Login Page</b></span></h1>
@@ -20,24 +21,32 @@
 		<div class="card" style="background-color: #65d6ce;">
 			<div class="card-header">
 				<h3>Sign In</h3>
+				<div class="d-flex justify-content-end social_icon">
+					<span><i class="fab fa-facebook-square"></i></span>
+					<span><i class="fab fa-google-plus-square"></i></span>
+					<span><i class="fab fa-twitter-square"></i></span>
+				</div>
 			</div>
-			<div class="card-body" >
+			<div class="card-body">
 				<form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
-					<div class="input-group form-group user" >
+					<div class="input-group form-group user">
 						<div class="input-group-prepend">
 							<span class="input-group-text "><i class="fas fa-user " ></i></span>
 						</div>
-						<input type="text" class="form-control user placeholder" placeholder="username">
+						<input type="text" class="form-control user placeholder" placeholder="username" required>
 					</div>
 					<div class="input-group form-group user">
 						<div class="input-group-prepend">
 							<span class="input-group-text "><i class="fas fa-key "></i></span>
 						</div>
-						<input type="password" class="form-control user placeholder" placeholder="password">
+						<input type="password" class="form-control user placeholder" placeholder="password" required>
+					</div>
+					<div class="row align-items-center remember">
+						<input type="checkbox">Remember Me
 					</div>
 					<br>
 					<div class="form-group" >
-						<input type = "submit" name="Login" value = "submit" class="placeholder user btn form-control login_btn" style="background-color: #ffdada;" >
+						<input type = "submit" name="Login" value = "submit" class="placeholder user btn form-control login_btn" style="background-color: #FFC312;" >
 					</div>
 				</form>
 			</div>
@@ -47,7 +56,10 @@
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					Don't have an account?</h5><br> 
 				<div class="d-flex justify-content-center links" >
-                    <input type="button" value="Register" (click)="register()" class="placeholder user btn form-control" style="background-color: #ffdada;"/>
+                    <input type="button" value="Register" (click)="register()" class="placeholder user btn form-control" style="background-color: #FFC312;"/>
+				</div>
+				<div class="d-flex justify-content-center">
+					<a href="#">Forgot your password?</a>
 				</div>
 			</div>
 		</div>

@@ -3,13 +3,13 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body class="back">
-    <header class="hero">
+<body>
+    <div class="hero">
 
 <div class="abc">
-    <br>
-<input class="home" type="button" value="Home" (click)="homepage()" />
-<div class="btn-group"> 
+<!-- <input class="home" type="button" value="Home" (click)="homepage()" /> -->
+<div class="btn-group navbar txt1"> 
+    <a [routerLink]="['/default']">Log Out</a>
     <a [routerLink]="['/studentdashboard',{outlets: {'student': ['studentinfo']}}]"> Student Info</a> 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a [routerLink]="['/studentdashboard',{outlets: {'student': ['availsport']}}]">Sports List </a> 
@@ -19,6 +19,6 @@
     <br>
 </div>
 </div>
-</header>
+</div>
 </body>
 </html>
