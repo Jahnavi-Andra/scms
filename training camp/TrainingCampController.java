@@ -36,7 +36,7 @@ public class TrainingCampController {
 		}
 
 	//accept/reject
-	@PutMapping("/updateStatus/{status}/{id}")
+	@PutMapping("/updateStatus/{status}/{stud_id}")
 		public  String updateStatus(@PathVariable String status , @PathVariable int stud_id) {
 			return tcs.updateStatus(status, stud_id);
 		
@@ -44,20 +44,20 @@ public class TrainingCampController {
 		
 		//listOfStudents
 	     @GetMapping("/listOfStudents/{trainer_id}")
-		public List<TrainingCamp> listOfStudents( @PathVariable  int trainer_id) {
+		public Optional<TrainingCamp> listOfStudents( @PathVariable  int trainer_id) {
 			return tcs.listOfStudents(trainer_id);
 		}
 		
 //		pendingStudentList
 	     @GetMapping("/pendingStudentList/{trainer_id}")
-		public List<TrainingCamp> pendingStudentList(@PathVariable int trainer_id) {
+		public Optional<TrainingCamp> pendingStudentList(@PathVariable int trainer_id) {
 			return tcs.pendingStudentList(trainer_id);
 		}
-	//selectStudNameId for update points display
-//	     @GetMapping("/selectStudNameId/{trainer_id}")
-//		public List<TrainingCamp> selectStudNameId(@PathVariable int trainer_id ) {
-//			return tcs.selectStudNameId(trainer_id);
-//		}
+	//selectStudId for update points display
+	     @GetMapping("/selectStudId/{trainer_id}")
+		public Optional<Integer> selectStudNameId(@PathVariable int trainer_id ) {
+			return tcs.selectStudNameId(trainer_id);
+		}
 		
 	//studentEnrollInfo 
 	     @GetMapping("/studentEnrollInfo/{stud_id}")
@@ -77,7 +77,8 @@ public class TrainingCampController {
 //			return "Enrolled Succesfully";
 //		}
 	     @PostMapping("/EnrollInsert")
-			public String EnrollInsert(@RequestBody TrainingCamp tc) {		
+			public String EnrollInsert(@RequestBody TrainingCamp tc) {	
+	    	 tc.setT_status("pending");
 				return tcs.EnrollInsert(tc);	
 		}
 	

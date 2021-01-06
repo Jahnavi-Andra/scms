@@ -34,19 +34,20 @@ public class TrainingCampService {
 	
 //listOfStudents
 	
-	public List<TrainingCamp> listOfStudents(int trainer_id) {
+	public Optional<TrainingCamp> listOfStudents(int trainer_id) {
 		return repo.listOfStudents(trainer_id);
 	}
 	
 //	pendingStudentList
-	public List<TrainingCamp> pendingStudentList(int trainer_id) {
+	public Optional<TrainingCamp> pendingStudentList(int trainer_id) {
 		return repo.pendingStudentList(trainer_id);
 	}
 //selectStudNameId for update points display
 	
-//	public List<TrainingCamp> selectStudNameId(int trainer_id ) {
-//		return repo.selectStudNameId(trainer_id);
-//	}
+	public Optional<Integer> selectStudNameId(int trainer_id )
+	{
+		return repo.selectStudNameId(trainer_id);
+	}
 //	
 //studentEnrollInfo 
 	

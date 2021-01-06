@@ -15,9 +15,9 @@ import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
 import javax.persistence.*;
 @Entity
+@Table(name = "training_camp")
 public class TrainingCamp  {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int tcamp_id;
 	private int stud_id;
 	private int sport_id;
@@ -108,7 +108,7 @@ public class TrainingCamp  {
 
 
 //constructor
-	public TrainingCamp(int tcamp_id, int stud_id, int sport_id, int trainer_id, Date doj, String t_status) {
+	public TrainingCamp(int tcamp_id,int sport_id, int trainer_id, int stud_id,Date doj,String t_status) {
 		super();
 		this.tcamp_id = tcamp_id;
 		this.stud_id = stud_id;

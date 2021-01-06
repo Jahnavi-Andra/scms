@@ -1,4 +1,4 @@
-use scms;
+use scms1;
 
 INSERT INTO sport(sport_id,sport_name,trainer_id,fee)
 VALUES('1','cricket','1','5000'),
@@ -36,26 +36,29 @@ VALUES('101','Praveen kumar','9543025334','praveen31','praveen@31','1000','0'),
 ('109','Madhu mitha','7808025324','madhu15','madhu@15','3000','0'),
 ('110','Priya Dharshini','8605625278','priya28','priya@28','5000','0');
 
-INSERT INTO TrainingCamp(tcamp_id,sport_id,trainer_id,stud_id,doj,t_status)
-VALUES('001','1','1','101','2020-12-21','pending'),
-('002','1','2','103','2020-12-15','pending'),
-('003','2','3','104','2020-11-02','accepted'),
-('004','2','4','107','2020-10-17','accepted'),
-('005','3','5','108','2020-11-01','accepted'),
-('006','3','6','102','2020-11-11','accepted'),
-('007','4','7','105','2020-08-13','pending'),
-('008','4','8','106','2020-11-23','rejected'),
-('009','5','9','109','2020-07-22','pending'),
-('010','5','10','110','2020-12-20','rejected');
+INSERT INTO training_camp(sport_id,trainer_id,stud_id,doj,t_status)
+VALUES
+('1','1','101','2020-12-21','pending'),
+('1','2','103','2020-12-15','pending'),
+('2','3','104','2020-11-02','accepted'),
+('2','4','107','2020-10-17','accepted'),
+('3','5','108','2020-11-01','accepted'),
+('3','6','102','2020-11-11','accepted'),
+('4','7','105','2020-08-13','pending'),
+('4','8','106','2020-11-23','rejected'),
+('5','9','109','2020-07-22','pending'),
+('5','10','110','2020-12-20','rejected');
 
 select * from sport;
 select * from trainer;
 select * from student;
-select * from TrainingCamp;
-
+select * from training_camp;
+show tables;
+SET SQL_SAFE_UPDATES = 0;
+update training_camp t set t.t_status= 'accepted' where t.stud_id = 101; 
 select s.stud_name, t.stud_id from TrainingCamp t join Student s on t.stud_id = s.stud_id where trainer_id= : and t_status='accepted';
 
-
+select stud_id,tcamp_id from Training_camp where trainer_id= 3 and t_status!='rejected';
 select s.trainer_id , s.sport_id, s.fee, s.sport_name, t.trainer_name from sports s join trainer t on s.trainer_id = t.trainer_id;
 
 

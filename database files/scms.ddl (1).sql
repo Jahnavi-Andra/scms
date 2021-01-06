@@ -1,9 +1,9 @@
 -- creating Database
-drop database if exists scms;
-create database scms;
+drop database if exists scms1;
+create database scms1;
 
 -- using the Database
-use scms;
+use scms1;
 
 drop table if exists sport;
 create table sport(
@@ -39,14 +39,14 @@ points int(10) not null default 0 ,
 primary key (stud_id)
 );
 
-drop table if exists TrainingCamp;
-create table TrainingCamp(
+drop table if exists training_camp;
+create table training_camp(
 tcamp_id int(10) not null auto_increment,
 sport_id int(10) not null references sports(sport_id),
 trainer_id int(10) not null references trainer(trainer_id),
 stud_id int(10) not null references student(stud_id),
 doj date not null,
-t_status varchar(20) not null default 'pending' ,
-primary key(tcamp_id,stud_id)
+t_status varchar(20) default 'pending' not null  ,
+primary key(tcamp_id)
 );
 
