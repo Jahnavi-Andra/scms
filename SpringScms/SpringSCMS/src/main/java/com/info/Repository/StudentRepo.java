@@ -10,6 +10,7 @@ import org.springframework.data.repository.query.Param;
 
 import com.info.Model.Student;
 
+<<<<<<< HEAD
 public interface StudentRepo extends JpaRepository<Student, Integer> {
 	
 	@Query("Select c from Student c where c.studUsername=:studUsername and c.studPassword=:studPassword")
@@ -38,3 +39,8 @@ public interface StudentRepo extends JpaRepository<Student, Integer> {
 //    public void registerStudent();
 	
 }
+=======
+//public interface StudentRepo extends JpaRepository<T, ID> {
+//
+//}
+>>>>>>> c3670cffc302b2861f393c465662111518e4302c
