@@ -52,6 +52,10 @@ select * from sports;
 select * from trainer;
 select * from student;
 select * from trainercamp;
+Update student c set c.points=c.points+200 where c.stud_id=102;
+Update student c set c.wallet=c.wallet-1000 where c.stud_id=102;
+insert into student (stud_name,stud_phone,stud_uname,stud_passwd,wallet,points)
+    		values("jahu","900","jkk","kkkk",2000,100);
 
 
 

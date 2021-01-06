@@ -34,8 +34,8 @@ stud_name varchar(50) not null,
 stud_phone numeric (10),
 stud_uname varchar(50) not null,
 stud_passwd varchar(50) not null,
-wallet varchar(50) not null,
-points int(10) not null,
+wallet int(10) not null,
+points int(10) not null default '0',
 primary key (stud_id)
 );
 
@@ -46,7 +46,7 @@ sport_id int(10) not null references sports(sport_id),
 trainer_id int(10) not null references trainer(trainer_id),
 stud_id int(10) not null references student(stud_id),
 doj date not null,
-t_status varchar(20) not null,
+t_status varchar(20) not null default 'pending',
 primary key(tcamp_id,stud_id)
 );
 
