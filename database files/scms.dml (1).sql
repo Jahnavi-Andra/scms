@@ -1,6 +1,6 @@
 use scms;
 
-INSERT INTO sports(sport_id,sport_name,trainer_id,fee)
+INSERT INTO sport(sport_id,sport_name,trainer_id,fee)
 VALUES('1','cricket','1','5000'),
 ('1','cricket','2','5000'),
 ('2','football','3','6000'),
@@ -36,7 +36,7 @@ VALUES('101','Praveen kumar','9543025334','praveen31','praveen@31','1000','0'),
 ('109','Madhu mitha','7808025324','madhu15','madhu@15','3000','0'),
 ('110','Priya Dharshini','8605625278','priya28','priya@28','5000','0');
 
-INSERT INTO trainercamp(tcamp_id,sport_id,trainer_id,stud_id,doj,t_status)
+INSERT INTO TrainingCamp(tcamp_id,sport_id,trainer_id,stud_id,doj,t_status)
 VALUES('001','1','1','101','2020-12-21','pending'),
 ('002','1','2','103','2020-12-15','pending'),
 ('003','2','3','104','2020-11-02','accepted'),
@@ -48,12 +48,14 @@ VALUES('001','1','1','101','2020-12-21','pending'),
 ('009','5','9','109','2020-07-22','pending'),
 ('010','5','10','110','2020-12-20','rejected');
 
-select * from sports;
+select * from sport;
 select * from trainer;
 select * from student;
-select * from trainercamp;
+select * from TrainingCamp;
+
+select s.stud_name, t.stud_id from TrainingCamp t join Student s on t.stud_id = s.stud_id where trainer_id= : and t_status='accepted';
 
 
-
+select s.trainer_id , s.sport_id, s.fee, s.sport_name, t.trainer_name from sports s join trainer t on s.trainer_id = t.trainer_id;
 
 
