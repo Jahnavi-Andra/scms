@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.info.Repository;
 
 import java.util.Date;
@@ -56,3 +57,14 @@ public interface TrainingCampRepo extends JpaRepository<TrainingCamp, Integer> {
 //	public void EnrollInsert(int sport_id,int  trainer_id,int stud_id,Date doj,String t_status);
 	
 }
+=======
+//package com.info.Repository;
+//
+//import org.springframework.data.jpa.repository.JpaRepository;
+//
+//import com.info.Model.TrainingCamp;
+//
+//public interface TrainingCampRepo extends JpaRepository<TrainingCamp, Integer> {
+//
+//}
+>>>>>>> a644a336e8e4fa661d8907a32313ce0273e3e26b
