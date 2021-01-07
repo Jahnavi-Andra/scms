@@ -61,7 +61,7 @@ public class StudentController {
 		} 
 	
 	@PutMapping("/studentwallet/{fee}/{studentId}")
-	public void updateWallet(@PathVariable double fee,@PathVariable int studentId) 
+	public void updateWallet(@PathVariable int fee,@PathVariable int studentId) 
 	{ 
 		service.updateWallet(fee, studentId);
 		} 
