@@ -1,6 +1,7 @@
 package com.info.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.info.Model.Student;
 import com.info.Service.StudentService;
-
+//@CrossOrigin(origins = "http://localhost:8580")
 @RestController
 @RequestMapping("/studentapi")
 public class StudentController {
@@ -55,15 +56,17 @@ public class StudentController {
 	}
 	
 	@PutMapping("/studentpoints/{studPoints}/{studentId}")
-	public void updatePoints(@PathVariable int studPoints,@PathVariable int studentId) 
+	public String updatePoints(@PathVariable int studPoints,@PathVariable int studentId) 
 	{ 
-		service.updatePoints(studPoints, studentId);
+		String msg = service.updatePoints(studPoints, studentId);
+		return msg; 
 		} 
 	
 	@PutMapping("/studentwallet/{fee}/{studentId}")
-	public void updateWallet(@PathVariable int fee,@PathVariable int studentId) 
+	public String updateWallet(@PathVariable int fee,@PathVariable int studentId) 
 	{ 
-		service.updateWallet(fee, studentId);
+		String msg = service.updateWallet(fee, studentId);
+		return msg;
 		} 
 	
 	

@@ -30,14 +30,16 @@ public class StudentService {
 		return s;
 	}
 	
-	public void updatePoints(int studPoints,int studentId)
+	public String updatePoints(int studPoints,int studentId)
 	{
 		repo.updatePoints(studPoints, studentId);
+		return "Points Updated";
 	}
 	
-	public void updateWallet(int fee,int studentId)
+	public String updateWallet(int fee,int studentId)
 	{
 		repo.updateWallet(fee, studentId);
+		return "Amount deducted";
 	}
 //	
 //	public void registerStudent(String studentName,double studentPhNo,String studUsername,String studPassword,int studWallet)
