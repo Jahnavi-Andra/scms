@@ -16,4 +16,6 @@ public interface TrainerRepo extends JpaRepository<Trainer, Integer> {
 	public int authCount(@Param("traUsername")String traUsername,@Param("traPassword")String traPassword);
 
 
+
 }
+

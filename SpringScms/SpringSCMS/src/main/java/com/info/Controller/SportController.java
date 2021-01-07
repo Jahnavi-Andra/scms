@@ -1,6 +1,7 @@
 package com.info.Controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,14 +22,23 @@ public class SportController {
 	{
 		List<Sport> sport = service.getSportAll();
 		return sport;
-
+		
 	}
 	@GetMapping("/sport/{trainerId}") 
 	public double getSport(@PathVariable("trainerId")int trainerId) 
 	{ 
 		double sport = service.sportbyTid(trainerId);
 		return sport; 
+		}
+	@GetMapping("/sportbytrainerid/{trainerId}")
+	public Optional<Sport> getAllByTrainerId(@PathVariable("trainerId")int trainerId){
+		return service.getAllByTrainerId(trainerId);
 	}
-
+	@GetMapping("/trainerinfo/{sid}")
+	public List<Sport> fetchSportTrainerId(@PathVariable("sid") int sid) {
+		List<Sport> x=service.fetchSportTrainerId(sid);
+		return x;
+	}
+	
 
 }

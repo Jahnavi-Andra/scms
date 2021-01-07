@@ -24,14 +24,14 @@ public interface TrainingCampRepo extends JpaRepository<TrainingCamp, Integer> {
 	//update updateStatus listOfStudents pendingStudentList selectStudNameId studentEnrollInfo EnrollDisplay EnrollInsert
 	 @Transactional
 	  @Modifying
-	@Query("update TrainingCamp t set t.t_status=:status where t.stud_id = :stud_id ")
-	public void updateStatus(@Param("status")String status ,@Param("stud_id")int stud_id );
+	@Query("update TrainingCamp t set t.t_status=:status where t.stud_id = :stud_id and t_status = 'pending' ")
+	public void updateStatus(String status ,int stud_id );
 	
 	//list of students
 	@Query("select t from TrainingCamp t where t.trainer_id=:trainerid and t.t_status!='rejected'")
 	public Optional<TrainingCamp> listOfStudents(@Param("trainerid")int trainerid);
 	
-	//update points
+	//update points selectStudNameIds
 	
 	@Query("select  t.stud_id from TrainingCamp t where t.trainer_id= :trainer_id and t.t_status='accepted'")
 	public Optional<Integer> selectStudNameId (@Param("trainer_id")int trainer_id);
@@ -40,6 +40,12 @@ public interface TrainingCampRepo extends JpaRepository<TrainingCamp, Integer> {
 	@Query("select t from TrainingCamp t where stud_id = :stud_id and t_status !='rejected' ")
 	public TrainingCamp studentEnrollInfo(@Param("stud_id")int stud_id);
 	
+	//Enroll validation for new user
+	@Query("select count(t)  from TrainingCamp t where stud_id = :stud_id")
+	public int oldOrNew(int stud_id);
+	//Enroll validation for rejected user
+	@Query("select t_status  from TrainingCamp t where stud_id = :stud_id")
+	public List< String> rejectedStudent(int stud_id);
 	
 	
 	//Enroll-details form

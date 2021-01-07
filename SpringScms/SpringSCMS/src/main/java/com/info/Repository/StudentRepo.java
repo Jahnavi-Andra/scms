@@ -30,7 +30,7 @@ public interface StudentRepo extends JpaRepository<Student, Integer> {
     @Transactional
     @Modifying
     @Query("Update Student c set c.studWallet=c.studWallet-:fee where c.studentId=:studentId")
-    public void updateWallet(@Param("fee")int fee, @Param("studentId")int studentId);
+    public void updateWallet(@Param("fee")double fee, @Param("studentId")int studentId);
 //    
 //    @Query("INSERT INTO Student values studentName=(:studentName)")
 //    public void register(String studentName);

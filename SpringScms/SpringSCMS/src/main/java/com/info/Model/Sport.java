@@ -1,13 +1,13 @@
-package com.info.Model;
+ package com.info.Model;
 
-import javax.persistence.Column;
+ import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
+ import javax.persistence.Id;
 
-@Entity
+ @Entity
 public class Sport {  
-
-
+	
+	
 	@Column(name="sport_id")
 	private int sportId;
 	@Column(name="sport_name")
@@ -17,9 +17,9 @@ public class Sport {
 	private int trainerId;
 	@Column(name="fee")
 	private double fee;
-
-
-
+	
+	
+	
 	public Sport(int sportId, String sportName, int trainerId, double fee) {
 		super();
 		this.sportId = sportId;
@@ -94,6 +94,13 @@ public class Sport {
 	}
 
 
+
+
+	
+	
+	
+
+	
 	public Sport() {
 		// TODO Auto-generated constructor stub
 	}
