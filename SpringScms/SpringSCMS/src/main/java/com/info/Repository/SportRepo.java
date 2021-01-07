@@ -1,17 +1,20 @@
-<<<<<<< HEAD
 package com.info.Repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
 
-//public interface SportRepo extends JpaRepository<T, ID> {
-=======
-//package com.info.Repository;
-//
-//import org.springframework.data.jpa.repository.JpaRepository;
-//
-//import com.info.Model.Sport;
-//
-//public interface SportRepo extends JpaRepository<Sport, Integer> {
->>>>>>> a644a336e8e4fa661d8907a32313ce0273e3e26b
-//
-//}
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.info.Model.Sport;
+
+public interface SportRepo extends JpaRepository<Sport, Integer> {
+	
+	@Query("select fee from Sport t where t.trainerId = :trainerId")
+	public double sportbyTid (int trainerId);
+	
+	//@Query("select t from Sport where sport_name = :sport_name")
+	//public List<Sport> SportbyName (String sport_name);
+	
+	@Query("select s from Sport s where s.sportId=:sport_id")
+	public List<Sport> trainerOfSport(int sport_id);
+}

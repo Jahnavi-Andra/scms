@@ -15,11 +15,7 @@ public interface TrainerRepo extends JpaRepository<Trainer, Integer> {
 	@Query("Select count(c) from Trainer c where c.traUsername=:traUsername and c.traPassword=:traPassword")
 	public int authCount(@Param("traUsername")String traUsername,@Param("traPassword")String traPassword);
 
-<<<<<<< HEAD
-//public interface TrainerRepo extends JpaRepository<T, ID> {
-//
-//}
-=======
+
 
 }
->>>>>>> a644a336e8e4fa661d8907a32313ce0273e3e26b
+

@@ -25,7 +25,7 @@ public class Student {
 	@Column(name="stud_passwd")
 	public String studPassword;
 	@Column(name="wallet")
-	public int studWallet;
+	public double studWallet;
 	@Column(name="points")
 	public int studPoints;
 	
@@ -59,10 +59,10 @@ public class Student {
 	public void setStudPassword(String studPassword) {
 		this.studPassword = studPassword;
 	}
-	public int getStudWallet() {
+	public double getStudWallet() {
 		return studWallet;
 	}
-	public void setStudWallet(int studWallet) {
+	public void setStudWallet(double studWallet) {
 		this.studWallet = studWallet;
 	}
 	public int getStudPoints() {
@@ -80,7 +80,7 @@ public class Student {
 	}
 	
 	public Student(int studentId, String studentName, double studentPhNo, String studUsername, String studPassword,
-			int studWallet, int studPoints) {
+			double studWallet, int studPoints) {
 		super();
 		this.studentId = studentId;
 		this.studentName = studentName;

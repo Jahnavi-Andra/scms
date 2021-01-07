@@ -36,9 +36,9 @@ public class TrainingCampController {
 		}
 
 	//accept/reject
-	@PutMapping("/updateStatus/{status}/{stud_id}")
-		public  String updateStatus(@PathVariable String status , @PathVariable int stud_id) {
-			return tcs.updateStatus(status, stud_id);
+	@PutMapping("/updateStatus/{status}/{stud_id}/{trainerId}")
+		public  String updateStatus(@PathVariable String status , @PathVariable int stud_id,@PathVariable int trainerId) {
+			return tcs.updateStatus(status, stud_id, trainerId);
 		
 		}
 		
@@ -78,7 +78,7 @@ public class TrainingCampController {
 //		}
 	     @PostMapping("/EnrollInsert")
 			public String EnrollInsert(@RequestBody TrainingCamp tc) {	
-	    	 tc.setT_status("pending");
+	    	 
 				return tcs.EnrollInsert(tc);	
 		}
 	
