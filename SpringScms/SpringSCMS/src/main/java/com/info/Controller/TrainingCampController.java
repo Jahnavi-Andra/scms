@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,9 +15,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.info.Model.Sport;
+import com.info.Model.Trainer;
 import com.info.Model.TrainingCamp;
 import com.info.Service.TrainingCampService;
-//@CrossOrigin(origins = "http://localhost:8580")
+@CrossOrigin(origins = "http://localhost:8580")
 @RestController
 @RequestMapping("/camp")
 public class TrainingCampController {
@@ -45,18 +48,18 @@ public class TrainingCampController {
 		
 		//listOfStudents
 	     @GetMapping("/listOfStudents/{trainer_id}")
-		public Optional<TrainingCamp> listOfStudents( @PathVariable  int trainer_id) {
+		public List<TrainingCamp> listOfStudents( @PathVariable  int trainer_id) {
 			return tcs.listOfStudents(trainer_id);
 		}
 		
 //		pendingStudentList
 	     @GetMapping("/pendingStudentList/{trainer_id}")
-		public Optional<TrainingCamp> pendingStudentList(@PathVariable int trainer_id) {
+		public List<TrainingCamp> pendingStudentList(@PathVariable int trainer_id) {
 			return tcs.pendingStudentList(trainer_id);
 		}
 	//selectStudId for update points display
 	     @GetMapping("/selectStudId/{trainer_id}")
-		public Optional<Integer> selectStudNameId(@PathVariable int trainer_id ) {
+		public List<Integer> selectStudNameId(@PathVariable int trainer_id ) {
 			return tcs.selectStudNameId(trainer_id);
 		}
 		
@@ -82,5 +85,19 @@ public class TrainingCampController {
 	    	 
 				return tcs.EnrollInsert(tc);	
 		}
-	
+	     @GetMapping("/trainerbysport/{sid}")
+	 	public List<Trainer> trainerbysport(@PathVariable("sid") int sid) {
+	 		List<Trainer> x=tcs.trainerbysport(sid);
+	 		return x;
+	 	}
+	     @GetMapping("/dojByStudId/{stud_id}")
+	     public  String dojByStudId(@PathVariable int stud_id) {
+	 		return tcs.dojByStudId(stud_id);
+	 	}
+	     @GetMapping("/sportGroup")
+	 	public  List<Sport> sportgroup(){
+			return tcs.sportgroup();
+	     }
+		
+	 	
 }

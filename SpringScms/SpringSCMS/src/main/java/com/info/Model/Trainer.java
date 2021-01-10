@@ -30,7 +30,7 @@ public class Trainer {
 	@Column(name="trainer_passwd")
 	public String traPassword;
 	@Column(name="sport_id")
-	public String sportId;
+	public int sportId;
 	
 	public int getTrainerId() {
 		return trainerId;
@@ -74,10 +74,10 @@ public class Trainer {
 	public void setTraPassword(String traPassword) {
 		this.traPassword = traPassword;
 	}
-	public String getSportId() {
+	public int getSportId() {
 		return sportId;
 	}
-	public void setSportId(String sportId) {
+	public void setSportId(int sportId) {
 		this.sportId = sportId;
 	}
 	@Override
@@ -87,7 +87,7 @@ public class Trainer {
 				+ traPassword + ", sportId=" + sportId + "]";
 	}
 	public Trainer(int trainerId, String trainerName, double trainerPhNo, int age, int experience, String traUsername,
-			String traPassword, String sportId) {
+			String traPassword, int sportId) {
 		super();
 		this.trainerId = trainerId;
 		this.trainerName = trainerName;

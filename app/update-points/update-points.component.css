@@ -1,0 +1,18 @@
+body{
+    width : 60%;
+    margin-top: 90px;
+  margin-left : 460px;
+
+  padding : 20px  20px;
+  height :60%;
+  filter : opacity(0.85);
+background-color:#d4e2d4;
+box-shadow: 0 0 10px #3b064d;
+}
+/* input.ng-invalid {
+  background-color:rgb(238, 117, 117);
+}
+
+input.ng-valid {
+  background-color:rgb(12, 181, 121);
+} */

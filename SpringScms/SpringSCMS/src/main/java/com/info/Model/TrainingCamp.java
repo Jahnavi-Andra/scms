@@ -22,7 +22,7 @@ public class TrainingCamp  {
 	private int stud_id;
 	private int sport_id;
 	private int trainer_id;
-	private Date doj;
+	private String doj;
 	private String t_status;
 	
 
@@ -76,13 +76,13 @@ public class TrainingCamp  {
 
 
 
-	public Date getDoj() {
+	public String getDoj() {
 		return doj;
 	}
 
 
 
-	public void setDoj(Date doj) {
+	public void setDoj(String doj) {
 		this.doj = doj;
 	}
 
@@ -108,7 +108,7 @@ public class TrainingCamp  {
 
 
 //constructor
-	public TrainingCamp(int tcamp_id,int sport_id, int trainer_id, int stud_id,Date doj,String t_status) {
+	public TrainingCamp(int tcamp_id,int sport_id, int trainer_id, int stud_id,String doj,String t_status) {
 		super();
 		this.tcamp_id = tcamp_id;
 		this.stud_id = stud_id;

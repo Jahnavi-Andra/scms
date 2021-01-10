@@ -1,0 +1,60 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,600i&display=swap" rel="stylesheet">
+  </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="#"> -->
+</head>
+
+  <body>
+  <div class="infocardContainer">
+    <div id="main">
+      <img src="/assets/user.jpg">
+    </div>
+    <div id="textbois">
+            <!-- <ul *ngFor="let item of student"> -->
+                     <h2>Name:&nbsp;  {{student.studentName}}<br>
+                   Id:     {{student.studentId}} <br>
+              Username:  {{student.studUsername}}<br>
+              <!-- Password:  {{student.studPassword}}<br> -->
+              Phone Number:  {{student.studentPhNo}}<br>
+             Wallet Amount:   {{student.studWallet}}<br>
+             Points:   {{student.studPoints}}</h2>
+            <!-- </ul> -->
+    </div>
+  </div></body>
+<div class="container">
+    <div class="card">
+        <div class="face face1">
+            <div class="content">
+                <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true">
+                <h3>Enroll Details</h3>
+            </div>
+        </div>
+        <div class="face face2">
+            <div class="content" >
+                <!-- <p>You have enrolled for :p</p>
+                    <a href="#">Enroll</a> -->
+
+
+                     <a *ngFor="let i of enrolll" style=" font-weight: 1000;"> 
+                      <h3>
+                    StudentId:     {{i.stud_id}} <br>
+               TrainerId:  {{i.trainer_id}}<br>
+               Sports Id:  {{i.sport_id}}<br>
+               Enroll Id:  {{i.tcamp_id}}<br>
+               Enroll Status:{{i.t_status}}<br>
+               Enroll date:{{i.doj}}
+               <!-- <br> -->
+               <!-- Date of Joining:{{i.doj}} -->
+              </h3>
+
+                      </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+

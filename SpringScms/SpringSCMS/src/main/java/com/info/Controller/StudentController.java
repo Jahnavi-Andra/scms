@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.info.Model.Student;
 import com.info.Service.StudentService;
-//@CrossOrigin(origins = "http://localhost:8580")
+@CrossOrigin(origins = "http://localhost:8580")
 @RestController
 @RequestMapping("/studentapi")
 public class StudentController {
@@ -24,7 +24,7 @@ public class StudentController {
 	@PostMapping("/student")
 	public String create(@RequestBody Student student) {
 		service.insert(student);
-		return "Student Data Inserted";
+		return "You have registered successfully..";
 	}
 	
 //	@PostMapping("/studentinsert")
@@ -63,7 +63,7 @@ public class StudentController {
 		} 
 	
 	@PutMapping("/studentwallet/{fee}/{studentId}")
-	public void updateWallet(@PathVariable double fee,@PathVariable int studentId) 
+	public String updateWallet(@PathVariable double fee,@PathVariable int studentId) 
 	{ 
 		String msg = service.updateWallet(fee, studentId);
 		return msg;

@@ -5,10 +5,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import com.info.Model.Sport;
 import com.info.Model.Student;
+import com.info.Model.Trainer;
 import com.info.Model.TrainingCamp;
 import com.info.Repository.TrainingCampRepo;
 
@@ -44,7 +46,7 @@ public class TrainingCampService {
 			repo.updateStatus(status, stud_id);
 			double fee = sportService.sportbyTid(trainerId);
 			studService.updateWallet(fee, stud_id);
-			return "Accepted and amount debited ";
+			return "Accepted and Amount is debited ";
 		} else {
 			repo.updateStatus(status, stud_id);
 			return "Rejected";
@@ -55,17 +57,17 @@ public class TrainingCampService {
 
 	//listOfStudents
 
-	public Optional<TrainingCamp> listOfStudents(int trainer_id) {
+	public List<TrainingCamp> listOfStudents(int trainer_id) {
 		return repo.listOfStudents(trainer_id);
 	}
 
 	//	pendingStudentList
-	public Optional<TrainingCamp> pendingStudentList(int trainer_id) {
+	public List<TrainingCamp> pendingStudentList(int trainer_id) {
 		return repo.pendingStudentList(trainer_id);
 	}
 	//selectStudNameId for update points display
 
-	public Optional<Integer> selectStudNameId(int trainer_id )
+	public List<Integer> selectStudNameId(int trainer_id )
 	{
 		return repo.selectStudNameId(trainer_id);
 	}
@@ -97,12 +99,12 @@ public class TrainingCampService {
 			if(status.get(length-1).equals("rejected")) {
 				
 				if(stud.getStudWallet() < fee ) {
-					return "you have no sufficient balance";
+					return "You have Insufficient Balance";
 				} else {
 					tc.setT_status("pending");
 					repo.save(tc);
 
-					return "Enrolled Succesfully";
+					return "You have Enrolled Succesfully";
 				}
 
 			}
@@ -112,12 +114,12 @@ public class TrainingCampService {
 		}else {
 			
 			if(stud.getStudWallet() < fee ) {
-				return "you have no sufficient balance";
+				return "You have Insufficient Balance";
 			} else {
 				tc.setT_status("pending");
 				repo.save(tc);
 
-				return "Enrolled Succesfully";
+				return "You have Enrolled Succesfully";
 			}
 
 		} 
@@ -127,8 +129,16 @@ public class TrainingCampService {
 	}
 
 
-
-
+	public List<Trainer> trainerbysport(int sid) {
+		List<Trainer> x=repo.trainerbysport(sid);
+		return x;
+	}
+	public  String dojByStudId(int stud_id) {
+		return repo.dojByStudId(stud_id);
+	}
+	public  List<Sport> sportgroup(){
+		return repo.sportgroup();
+	}
 
 
 }

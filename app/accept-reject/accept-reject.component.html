@@ -1,0 +1,65 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <form #arForm="ngForm" (ngSubmit)="acceptreject(arForm)" class="frm">
+      <h4 style="text-align: center;">Accept / Reject</h4><hr>
+        <div class="form-group">
+          <label >Trainer Name</label>
+          <input type="text"  class="form-control" placeholder="Trainer Name"  [(ngModel)]="trainer.trainerName" name="trainerName" readonly>
+          <!-- <div class="text-danger"
+          *ngIf="(tid.invalid  && arForm.submitted) ">&nbsp;&nbsp;
+          Enter Trainer Id
+        </div> -->
+        </div>
+        <div class="form-group">
+          <label for="studentId" class="txt1">Student Id<span>*</span></label>
+          <select name="studentId"  [(ngModel)]="studentId"  class="form-control" placeholder="Student Id"  
+           #studId="ngModel" (change)="doj1()" required>
+             <option *ngFor="let item of pendingList" value="{{item.stud_id}}">
+               {{ item.stud_id}} 
+             </option>
+          </select>
+            <div class="text-danger"
+            *ngIf="(studId.invalid  && arForm.submitted) ">&nbsp;&nbsp;
+            Select Any one
+          </div>
+          </div>
+          <div class="form-group">
+            <label for="studentName" class="txt1">Student Name<span>*</span></label>
+            <input id="studentName" class="form-control" type="text" [(ngModel)]="studentName" name="studentName" readonly />
+          </div>
+
+          <div class="form-group">
+            <label for="status">Accept / Reject</label>
+            <select  class="form-control" id="status"  default="Accept/Reject" [(ngModel)]="status" ngModel name="status" required #stat="ngModel">
+              <option value="accepted">Accept</option>
+              <option value="rejected">Reject</option>
+            </select>
+            <div class="text-danger"
+            *ngIf="(stat.invalid  && arForm.submitted) ">&nbsp;&nbsp;
+            Select Any one
+          </div>
+          </div>
+        <div class="form-group">
+            <label >Enroll Date</label>
+            <input type="text"  class="form-control" placeholder="DOj" [(ngModel)]="doj" name="doj" readonly>
+            <!-- <div class="text-danger"
+            *ngIf="(doj.invalid  && arForm.submitted) ">&nbsp;&nbsp;
+            Enter Date
+          </div> -->
+          </div>      
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input">
+            Check me out
+          </label>
+        </div>
+        <input type="submit" class="btn btn-primary">
+        <br>
+        <br>
+     <strong>{{msg}}</strong>   
+      </form>
+</body>
+</html>

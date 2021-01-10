@@ -36,7 +36,7 @@ public class StudentService {
 		return "Points Updated";
 	}
 	
-	public void updateWallet(double fee,int studentId)
+	public String updateWallet(double fee,int studentId)
 	{
 		repo.updateWallet(fee, studentId);
 		return "Amount deducted";

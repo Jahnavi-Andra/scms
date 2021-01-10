@@ -5,7 +5,7 @@ VALUES('1','cricket','1','5000'),
 ('1','cricket','2','5000'),
 ('2','football','3','6000'),
 ('2','football','4','6000'),
-('3','volleball','5','3000'),
+('3','volleyball','5','3000'),
 ('3','volleyball','6','3000'),
 ('4','tennis','7','5000'),
 ('4','tennis','8','5000'),
@@ -48,24 +48,4 @@ VALUES
 ('4','8','106','2020-11-23','rejected'),
 ('5','9','109','2020-07-22','pending'),
 ('5','10','110','2020-12-20','rejected');
-
-select * from sport;
-select * from trainer;
-select * from student;
-select * from trainercamp;
-Update student c set c.points=c.points+200 where c.stud_id=102;
-Update student c set c.wallet=c.wallet-1000 where c.stud_id=102;
-insert into student (stud_name,stud_phone,stud_uname,stud_passwd,wallet,points)
-    		values("jahu","900","jkk","kkkk",2000,100);
-
-
-select * from training_camp;
-show tables;
-SET SQL_SAFE_UPDATES = 0;
-update training_camp t set t.t_status= 'accepted' where t.stud_id = 101; 
-select s.stud_name, t.stud_id from TrainingCamp t join Student s on t.stud_id = s.stud_id where trainer_id= "" and t_status='accepted';
-
-select stud_id,tcamp_id from Training_camp where trainer_id= 3 and t_status!='rejected';
-select s.trainer_id , s.sport_id, s.fee, s.sport_name, t.trainer_name from sports s join trainer t on s.trainer_id = t.trainer_id;
-
 

@@ -1,0 +1,56 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  </head>
+<body>
+    <form #pointsForm="ngForm" (ngSubmit)="update(pointsForm)">
+      <h2 style="text-align: center;">Update Points</h2><hr>
+        <div class="form-group">
+          <label >Student Id </label>
+
+
+         <!-- <select name="item" [(ngModel)]="item"> -->
+
+         <!-- </select> -->
+         <select name="student"  [(ngModel)]="studentid" (change)="stud()"  class="form-control" placeholder="Student Id" ngModel #student="ngModel"required>
+    <option *ngFor="let item of ids"value={{item}}>
+      {{ item}}
+    </option>
+    <!-- <option ng></option> -->
+  </select>
+
+          <!-- <input type="text"  name="studentid "class="form-control" placeholder="Student Id" ngModel name="studentid" required #studentid="ngModel"> -->
+          <span class="text-danger"
+          *ngIf="(student.invalid  && pointsForm.submitted) ">
+          Name is required
+      </span>
+        </div>
+        <div class="form-group">
+          <label for="studentName" class="txt1">Student Name<span>*</span></label>
+          <input id="studentName" class="form-control" type="text" [(ngModel)]="studentName" name="studentName" readonly />
+
+        </div>
+        <div class="form-group">
+            <label >Points Based on Performance</label>
+            <input type="number"  class="form-control" placeholder="points" [(ngModel)]="points" 
+            ngModel name="point" required #point="ngModel">
+            <span class="text-danger"
+            *ngIf="(point.invalid  && pointsForm.submitted) ">
+            Points is required
+        </span>
+          </div>      
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input">
+            Check me out
+          </label>
+        </div>
+        <input type="submit" class="btn btn-primary">
+        <br><br>
+    
+          <strong>{{msg}}</strong>   
+    
+      </form>
+</body>
+</html>

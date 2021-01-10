@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.info.Model.Trainer;
 import com.info.Service.TrainerService;
-//@CrossOrigin(origins = "http://localhost:8580")
+@CrossOrigin(origins = "http://localhost:8580")
 @RestController
 @RequestMapping("/trainerapi")
 public class TrainerController {
