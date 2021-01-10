@@ -1,6 +1,7 @@
 
 body, html {
     height: 100%;
+  position: absolute;
   }
 
 .nav-link{
@@ -10,7 +11,7 @@ font-family: Audiowide;
 }
 .bimg {
     /* The image used */
-    background-image:url("/assets/vector.jpg");
+    background-image:url("/assets/mount.jpg");
     min-height: 666px;
 
     /* Center and scale the image nicely */
@@ -34,16 +35,17 @@ border: transparent;
 }
 
   .cont {
-    position: absolute;
+    position: relative;
+  
     /* margin: 20px; */
     width: auto;
-    margin-top: 30px;
-    margin-left: 70px;
+    /* margin-top: 30px; */
+    margin-left: 50px;
     
   }
   .vid{
     top: 40%;
-    left: 40%;
+    /* left: 40%; */
   }
   /* .navbar{
     background-color: transparent;

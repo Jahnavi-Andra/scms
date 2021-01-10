@@ -1,3 +1,108 @@
-<p>student-signup works!</p>
-<input type="button" value="Home" (click)="homepage()" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div class="image">
+   <!-- <div class ="shome">
+      <input type="button" value="Home" (click)="homepage()" />
+      </div> --><br>
+      <nav class="navbar navbar-light ">
+         <div class="container-fluid bg-bright">
+           <input type="button" value="Home" (click)="homepage()" class="home btn btn-success"   />
+           <input type="button" value="Login" (click)="login()" class="login btn btn-success"   />
+         </div>
+        </nav>
+        <!-- table-striped -->
+<div class="container  table-striped"> 
+       <table class="table ">
+          <tbody>
+             <tr>
+                <td colspan="1">
+                   <form class="well form-horizontal" #regForm="ngForm" (ngSubmit)="register(regForm)">
+                        <div class="bg-success" style="color: white; padding-top: 2px; ">
+                                            <h2 style="text-align: center;">Registration Form</h2><hr> 
+                                         </div>
+                      <fieldset>
+                         <div class="form-group">
+                            <label class="col-md-3 control-label text-left">Name</label>
+                            <div class="col-md-9 inputGroupContainer">
+                               <div class="input-group "><span class="input-group-addon">
+                              <i class="glyphicon glyphicon-user"></i></span>
+                              <input id="fullName" placeholder="Full Name" class="form-control" [(ngModel)]="student.studentName" [ngModelOptions]="{standalone: true}"
+                               ngModel name="fullName" required #fullName="ngModel" type="text">
+                              <div class="text-danger"
+                              *ngIf="(fullName.invalid  && regForm.submitted) ">&nbsp;&nbsp;
+                             Enter Full Name
+                            </div>
+                           </div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-3 control-label text-left">User Name</label>
+                            <div class="col-md-9 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                 <input id="address" placeholder="User Name " class="form-control" [(ngModel)]="student.studUsername" [ngModelOptions]="{standalone: true}"
+                                 ngModel name="address" required #address="ngModel" type="text">
+                                 <div class="text-danger"
+                                 *ngIf="(address.invalid  && regForm.submitted) ">&nbsp;&nbsp;
+                                Enter userName
+                               </div>
+                              </div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-3 control-label text-left">Password</label>
+                            <div class="col-md-9 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-lock "></i></span>
+                                 <input id="email" placeholder="Password" class="form-control" [(ngModel)]="student.studPassword" [ngModelOptions]="{standalone: true}"
+                                  ngModel name="email" required #email="ngModel" type="text">
+                                 <div class="text-danger"
+                                 *ngIf="(email.invalid  && regForm.submitted) ">&nbsp;&nbsp;
+                                Enter password
+                               </div>
+                              </div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-3 control-label text-left">Phone Number</label>
+                            <div class="col-md-9 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                              <input id="phoneNumber" placeholder="Phone Number" class="form-control" [(ngModel)]="student.studentPhNo" [ngModelOptions]="{standalone: true}"
+                              ngModel name="phoneNumber" required #phoneNumber="ngModel" type="text">
+                              <div class="text-danger"
+                              *ngIf="(phoneNumber.invalid  && regForm.submitted) ">&nbsp;&nbsp;
+                             Enter phoneNumber
+                            </div>
+                           </div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-3 control-label text-left">Wallet</label>
+                            <div class="col-md-9 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span>
+                                 <input id="amount" placeholder=" Add your Wallet " class="form-control" [(ngModel)]="student.studWallet" [ngModelOptions]="{standalone: true}"
+                                 ngModel name="amount" required #amount="ngModel" type="text">
+                                 <div class="text-danger"
+                              *ngIf="(amount.invalid  && regForm.submitted) ">&nbsp;&nbsp;
+                             Enter Wallet amount
+                            </div>
+                              </div>
+                            </div>
+                         </div>
+                      </fieldset>
+                      <div class="new">
+                        <button type="submit" class="btn btn-success">Register</button>
+                        <br><br>
+                        <strong>{{msg}}</strong>   
+                        </div>
+                   </form>
+                </td>
+                
+             </tr>
+          </tbody>
+          
+       </table>
+    </div>
+    </div>

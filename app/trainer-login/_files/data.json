@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "name": "krishna",
+        "PhoneNo": "53262623",
+        "Age": "26",
+        "Experience": "3",
+    "Username": "krishna12",
+    "Password":"123",
+	"sport":"Football"
+    },
+    {
+        "id":2,
+        "name": "krishna",
+        "PhoneNo": "53262623",
+        "Age": "26",
+        "Experience": "3",
+    "Username": "jahnavi",
+    "Password":"1234",
+	"sport":"Football"
+    }
+]

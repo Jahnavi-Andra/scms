@@ -1,8 +1,26 @@
-<input type="button" value="Home" (click)="homepage()" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a [routerLink]="['/studentdashboard',{outlets: {'student': ['studentinfo']}}]"> Student Info</a> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a [routerLink]="['/studentdashboard',{outlets: {'student': ['availsport']}}]">Sports List </a> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a [routerLink]="['/studentdashboard',{outlets: {'student': ['enroll']}}]"> Enroll</a> 
-<router-outlet name='student'></router-outlet>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="hero">
+
+<div class="abc">
+<!-- <input class="home" type="button" value="Home" (click)="homepage()" /> -->
+<div class="btn-group navbar txt1"> 
+    <a [routerLink]="['/default']">Log Out</a>
+    <a [routerLink]="['/studentdashboard',{outlets: {'student': ['studentinfo']}}]"> Student Info</a> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a [routerLink]="['/studentdashboard',{outlets: {'student': ['availsport']}}]">Sports List </a> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a [routerLink]="['/studentdashboard',{outlets: {'student': ['enroll']}}]"> Enroll</a> 
+    <router-outlet name='student'></router-outlet>
+    <br>
+</div>
+<!-- <h1><span class="blinking"><b>Welcome to Student Dashboard</b></span></h1> -->
+
+</div>
+</div>
+</body>
+</html>

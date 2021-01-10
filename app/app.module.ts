@@ -19,7 +19,10 @@ import { AcceptRejectComponent } from './accept-reject/accept-reject.component';
 import { UpdatePointsComponent } from './update-points/update-points.component';
 import { RouterModule, Routes } from '@angular/router';
 import {​​​​​​​​ HttpModule }​​​​​​​​ from'@angular/http';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 
+// import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { HttpClientModule } from '@angular/common/http';
 const appRoutes : Routes = [
   {path :'studentdashboard', component:StudentDashboardComponent,
   children :
@@ -49,6 +52,7 @@ const appRoutes : Routes = [
   {path : '', component:HomeComponent},
   {path : 'register', component:StudentSignupComponent},
   {path : 'studentlogin', component:StudentLoginComponent},
+  {path : 'studentinfo', component:StudentInfoComponent},
   {path : 'trainerlogin', component:TrainerLoginComponent},
   {path : 'aboutus', component:AboutusComponent},
 ]
@@ -69,12 +73,14 @@ const appRoutes : Routes = [
     EnrollComponent,
     ListofStudentsComponent,
     AcceptRejectComponent,
-    UpdatePointsComponent
+    UpdatePointsComponent,
   ],
   imports: [
     BrowserModule,FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
+    NgxPageScrollModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],

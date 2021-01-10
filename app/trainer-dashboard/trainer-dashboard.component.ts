@@ -6,9 +6,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./trainer-dashboard.component.css']
 })
 export class TrainerDashboardComponent implements OnInit {
-  homepage() {
-    this._router.navigate(['/default']);
-  }
+  // homepage() {
+  //   this._router.navigate(['/default']);
+  // }
   constructor(private _router : Router) { }
 
   ngOnInit(): void {
